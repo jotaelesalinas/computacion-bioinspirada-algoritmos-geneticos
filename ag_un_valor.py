@@ -26,14 +26,10 @@ def func2(x):
 def func3(x):
     return 2.0 * x**4 - 10.0 * x**3 + 3.0 * x**2 - 5.0 * x 
 
-def func_compuesta_un_valor(values):
-    return 8.0 * values[0]**4 + 10.0 * values[0]**3 + 3.0 * values[0]**2 - 7.0 * values[0]
-
-def func_compuesta_tres_valores(values):
-    return func1(values[0]) + func2(values[1]) + func3(values[2])
+def objective(values):
+    return func1(values[0]) + func2(values[0]) + func3(values[0])
 
 n_values = 1
-objective = func_compuesta_un_valor
 
 n_bits = n_values * [20]
 
